@@ -33,9 +33,9 @@ public class PaymentController {
     }
 
     @GetMapping("/payment/get/{id}")
-    public CommonResult findPaymentById(@PathVariable("id") Long id){
+    public CommonResult<Payment> findPaymentById(@PathVariable("id") Long id){
         Payment payment = paymentService.getPaymentyId(id);
-        log.info("查询结果为： =====>" + payment);
+        log.info("这次的查询结果为： =====>" + payment);
 
         if (payment != null){
             return new CommonResult(HttpStatus.OK.value(), "查询成功", payment);
