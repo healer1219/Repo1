@@ -12,6 +12,7 @@
   <modules>
     <module>cloud-provider-payment8001</module>
     <module>cloud-consumer-order80</module>
+    <module>cloud-api-commons</module>
   </modules>
 
 <!--  <repositories>-->
@@ -56,6 +57,7 @@
   <dependencyManagement>
     <dependencies>
       <!-- springboot 与 springcloud 版本需要搭配 以下是官方推荐的搭配-->
+
 
       <!-- spring boot 2.2.2-->
       <dependency>

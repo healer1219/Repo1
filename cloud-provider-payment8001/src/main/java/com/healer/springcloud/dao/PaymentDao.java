@@ -3,6 +3,7 @@ package com.healer.springcloud.dao;
 import com.healer.springcloud.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.transaction.annotation.Transactional;
 
 @Mapper
 public interface PaymentDao {
@@ -11,6 +12,7 @@ public interface PaymentDao {
      * @param payment
      * @return
      */
+    @Transactional
     public int create(Payment payment);
 
     /**
@@ -18,5 +20,6 @@ public interface PaymentDao {
      * @param id
      * @return
      */
+    @Transactional
     public Payment getPaymentyId(@Param("id") Long id);
 }
